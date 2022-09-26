@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <artifactId>ponder-quota-account</artifactId>
+        <groupId>io.github.pquota</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ponder-quota-account-application</artifactId>
+    <version>1.0.0</version>
+    <name>ponder-quota-account-application</name>
+    <description>the application service module of the account business center</description>
+
+    <dependencies>
+        <!-- Spring Framework -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Project Modules -->
+        <dependency>
+            <groupId>io.github.pquota</groupId>
+            <artifactId>ponder-quota-account-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.pquota</groupId>
+            <artifactId>ponder-quota-account-interface</artifactId>
+        </dependency>
+    </dependencies>
+    
+</project>

@@ -1,0 +1,20 @@
+server:
+  port: 8190
+  
+custom:
+  address:
+    nacos: 127.0.0.1:8848
+
+spring:
+  application:
+    name: ponder-quota-account
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${custom.address.nacos}
+      config:
+        server-addr: ${custom.address.nacos}
+        shared-configs:
+          - data-id: ponder-quota-shared.yml
+        prefix: ponder-quota-account
+        file-extension: yml

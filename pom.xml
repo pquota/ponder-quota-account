@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>io.github.pquota</groupId>
+    <artifactId>ponder-quota-groundwork</artifactId>
+    <version>1.0.0</version>
+    <relativePath/>
+  </parent>
+
+  <artifactId>ponder-quota-account</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>ponder-quota-account</name>
+  <description>the account business center of Ponder Quota</description>
+  <inceptionYear>2022</inceptionYear>
+  <url>https://io.github.pquota</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://www.opensource.org/licenses/mit-license.php</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>pquota</name>
+    <url>https://github.com/pquota</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>ponderyao</name>
+      <url>https://github.com/ponderyao</url>
+      <email>ponderyao@gmail.com</email>
+    </developer>
+  </developers>
+  
+  <modules>
+    <module>ponder-quota-account-application</module>
+    <module>ponder-quota-account-common</module>
+    <module>ponder-quota-account-domain</module>
+    <module>ponder-quota-account-infrastructure</module>
+    <module>ponder-quota-account-interface</module>
+    <module>ponder-quota-account-starter</module>
+  </modules>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Project Modules Version Control -->
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-application</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-common</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-domain</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-infrastructure</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-interface</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.pquota</groupId>
+        <artifactId>ponder-quota-account-starter</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.2.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M5</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>${java.version}</source>
+            <target>${java.version}</target>
+            <encoding>UTF-8</encoding>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${spring-boot.version}</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <artifactId>ponder-quota-account</artifactId>
+        <groupId>io.github.pquota</groupId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>ponder-quota-account-interface</artifactId>
+    <version>1.0.0</version>
+    <name>ponder-quota-account-interface</name>
+    <description>the interface api module of the account business center</description>
+
+    <dependencies>
+        <!-- Domain Driven Design -->
+        <dependency>
+            <groupId>io.github.ponderyao</groupId>
+            <artifactId>domain-driven-design-framework</artifactId>
+        </dependency>
+        <!-- Spring Cloud -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--  Development Tool -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- Project Framework Dependencies -->
+        <dependency>
+            <groupId>io.github.pquota</groupId>
+            <artifactId>ponder-quota-groundwork-common</artifactId>
+        </dependency>
+    </dependencies>
+    
+</project>
